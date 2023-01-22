@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,15 +15,16 @@ body {
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
-.menu {
+.menu,
+.copy {
   grid-column: 3 / -1;
-  background-color: #FFBB55;
+  background-color: #ffbb55;
   padding: 10px;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .menu ul {
-  display: flex;;
+  display: flex;
 }
 .menu li a {
   display: inline-block;
@@ -31,7 +32,7 @@ body {
   text-decoration: none;
   margin-right: 20px;
   color: #222;
-  font: bold .875rem/1 "Lucida Console", monospace;
+  font: bold 0.875rem/1 "Lucida Console", monospace;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
@@ -57,7 +58,7 @@ body {
   margin-bottom: 1rem;
   color: #e54;
 }
-.animais h2::before{
+.animais h2::before {
   content: "";
   display: inline-block;
   width: 40px;
@@ -82,8 +83,76 @@ body {
   background: #fb5;
   border-left: 4px solid #faf6ed;
   border-right: 4px solid #faf6ed;
-  
 }
-.animais-descricao section{
+.animais-descricao section {
   margin-bottom: 2rem;
+}
+.faq-perguntas,
+.contato {
+  grid-column: 2/-1;
+}
+
+.faq-perguntas dt {
+  font: bold 0.875rem/1.2 "Lucida Console", monospace;
+  letter-spacing: 0.2em;
+  color: #e54;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.faq-perguntas dt::before,
+.contato li::before {
+  content: "";
+  display: inline-block;
+  background-color: #fb5;
+  width: 20px;
+  height: 10px;
+  margin-right: 15px;
+}
+.faq-perguntas dd {
+  font: 400 1rem/1.2 "Arial", sans-serif;
+  margin-bottom: 2rem;
+  margin-left: 35px;
+}
+.mapa {
+  grid-column: 2;
+}
+.copy p {
+  padding: 10px;
+  margin-right: 20px;
+  color: #222;
+  font: bold 0.875rem/1 "Lucida Console", monospace;
+}
+.contato li {
+  font: 400 1rem/1.2 "Arial", sans-serif;
+  margin-bottom: 1rem;
+}
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .menu, .grid-section, .copy {
+    grid-column: 1;
+  }  
+  .titulo {
+    font-size: 3rem;
+    grid-column: 1 / -1;
+  }
+  .menu {
+    margin-top: 0;
+  }
+  .animais-lista {
+    grid-column: 1;
+  }
+  .animais-descricao {
+    grid-column: 2 / -1;
+  }
+  .faq-perguntas,
+  .contato ul,
+  .mapa {
+    grid-column: 1 /-1;
+  }
+  .copy {
+    margin-bottom: 0;
+  }
 }
