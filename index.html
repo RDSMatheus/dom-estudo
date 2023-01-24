@@ -10,10 +10,13 @@
   <link rel="stylesheet"
     href="./css/style.css">
   <title>Animais Fantasticos</title>
+  <script>
+    document.documentElement.className += " js"
+  </script>
 </head>
 
 <body>
-  <nav class="menu">
+  <nav class="menu js-menu">
     <ul>
       <li>
         <a href="#animais">Animais</a>
@@ -25,15 +28,15 @@
         <a href="#contato">Contato</a>
       </li>
       <li>
-        <a href="">Dev → </a>
+        <a href="https://www.origamid.com">Dev → </a>
       </li>
     </ul>
   </nav>
 
-  <section class="grid-section animais"
+  <section class="grid-section animais js-scroll"
     id="animais">
     <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista">
+    <ul class="animais-lista jstab-menu">
       <li>
         <img src="./img/imagem1.jpg"
           alt="">
@@ -59,7 +62,7 @@
           alt="">
       </li>
     </ul>
-    <div class="animais-descricao">
+    <div class="animais-descricao js-tabconteudo">
       <section>
         <h2>Raposa</h2>
         <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
@@ -109,10 +112,10 @@
       </section>
     </div>
   </section>
-  <section class="grid-section faq"
+  <section class="grid-section faq js-scroll"
     id="faq">
     <h1 class="titulo">FAQ</h1>
-    <dl class="faq-perguntas">
+    <dl class="faq-perguntas js-faq">
       <dt>Qual a idade dos animais?</dt>
       <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
       <dt>Eles são fantásticos?</dt>
@@ -123,7 +126,7 @@
       <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
     </dl>
   </section>
-  <section class="grid-section contato"
+  <section class="grid-section contato js-scroll"
     id="contato">
     <h1 class="titulo">Contato</h1>
     <div class="mapa">

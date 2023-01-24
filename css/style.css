@@ -15,6 +15,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
+
 .menu,
 .copy {
   grid-column: 3 / -1;
@@ -28,7 +29,7 @@ body {
 }
 .menu li a {
   display: inline-block;
-  padding: 10px;
+  padding: 17px 10px;
   text-decoration: none;
   margin-right: 20px;
   color: #222;
@@ -74,6 +75,7 @@ body {
   max-height: 370px;
   overflow: auto;
   grid-column: 2 / 3;
+  cursor: pointer;
 }
 .animais-lista::-webkit-scrollbar {
   width: 18px;
@@ -87,6 +89,7 @@ body {
 .animais-descricao section {
   margin-bottom: 2rem;
 }
+
 .faq-perguntas,
 .contato {
   grid-column: 2/-1;
@@ -131,9 +134,14 @@ body {
   body {
     grid-template-columns: 1fr;
   }
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
-  }  
+  }
+  .grid-section {
+    grid-template-columns: 100px 1fr;
+  }
   .titulo {
     font-size: 3rem;
     grid-column: 1 / -1;
@@ -155,4 +163,62 @@ body {
   .copy {
     margin-bottom: 0;
   }
+}
+.js .js-tabconteudo section {
+  display: none;
+}
+
+.js .js-tabconteudo section.ativo {
+  display: block;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.js .js-faq dt{
+  cursor: pointer;
+}
+.js .js-faq dt::after{
+  content: "⤵";
+  margin-left: 20px;
+}
+.js .js-faq dt.ativo::after{
+  content: "⤴";
+  margin-left: 20px;
+}
+.js .js-faq dd {
+  display: none;
+}
+
+.js .js-faq dd.ativo {
+  display: block;
+  animation: slideDown 0.5s;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.js .js-scroll {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate3d(-30px, 0, 0);
+}
+.js .js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
