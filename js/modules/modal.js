@@ -10,7 +10,7 @@ export default function initModal() {
     }
     function clickForaModal(event) {
       if (event.target === event.currentTarget) {
-        toggleModal();
+        toggleModal(event);
       }
     }
 

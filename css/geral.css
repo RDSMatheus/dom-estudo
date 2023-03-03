@@ -237,3 +237,25 @@ img {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+[data-semana]::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #e54;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-left: 10px;
+}
+[data-semana].aberto::after{
+  background-color: #00ff00;
+}
+
+.btc-preco{
+  display: inline-block;
+  padding: .2rem .5rem;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #00ff00;
+}

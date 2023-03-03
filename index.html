@@ -19,9 +19,24 @@
   <div class="grid-container">
     <nav class="menu"
       data-menu='suave'>
-      <ul>
+      <button data-menu="button"
+        aria-expanded="false"
+        aria-controls="menu">Menu</button>
+      <ul data-menu="list"
+        id="menu">
         <li>
           <a href="#animais">Animais</a>
+        </li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="empresa.html">A Empresa</a>
+              <a href="equipe.html">Equipe</a>
+              <a href="socios.html">Sócios</a>
+              <a href="investidores.html">Investidores</a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="#faq">FAQ</a>
@@ -30,7 +45,8 @@
           <a href="#contato">Contato</a>
         </li>
         <li>
-          <a data-modal="login" href="login.html">Login → </a>
+          <a data-modal="login"
+            href="login.html">Login → </a>
         </li>
       </ul>
     </nav>
@@ -133,11 +149,23 @@
         <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
       </dl>
     </section>
+
+    <section class="grid-section numeros"
+      data-anime="scroll">
+      <h1 class="titulo">Números</h1>
+      <div class="numeros-grid">
+        
+      </div>
+
+    </section>
+
     <section class="grid-section contato"
       data-anime="scroll"
       id="contato">
       <h1 class="titulo">Contato</h1>
-      <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
+      <div class="mapa"
+        data-tooltip
+        aria-label="Endereço próximo ao estacionamento.">
         <img src="./img/mapa.png"
           alt="">
       </div>
@@ -146,6 +174,8 @@
         <li>+55 (21) 9999-9999</li>
         <li>Rua do Conde, nº 21</li>
         <li>Rio de Janeiro - RJ</li>
+        <li>Doe <span class="btc-preco">0</span> bitcoin para nos ajudar.</li>
+        <li data-semana="1, 2, 3, 4, 5" data-horario="8, 18">Segunda à Sexta. Das 8 às 18 horas.</li>
       </ul>
     </section>
     <footer class="copy">
