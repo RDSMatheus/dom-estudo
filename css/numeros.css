@@ -1,23 +1,25 @@
 .numeros-grid {
+  grid-column: 2 / 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column: 2/4;
-  gap: 30px;
+  grid-gap: 30px;
 }
-@media(max-width: 700px){
-  .numeros-grid{
+
+@media (max-width: 700px) {
+  .numeros-grid {
     grid-column: 1;
   }
 }
-.numeros-grid h3{
-  font: "Playfair Display SC";
+
+.numeros-grid h3 {
+  font-family: 'Playfair Display SC';
   font-size: 2rem;
   margin-bottom: .5rem;
 }
 
-.numeros-grid span{
-  font: monospace;
+.numeros-grid span {
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #e54;
+  color: #E54;
 }

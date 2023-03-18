@@ -1,15 +1,18 @@
 export default function initAccordion() {
-  const listaTitulo = document.querySelectorAll("[data-anime='accordion'] dt");
-  if (listaTitulo.length) {
-    listaTitulo[0].classList.add("ativo");
-    listaTitulo[0].nextElementSibling.classList.add("ativo");
-    function abrirLista(event) {
-      this.classList.toggle("ativo");
-      event.currentTarget.nextElementSibling.classList.toggle("ativo");
-    }
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
+  const activeClass = 'ativo';
 
-    listaTitulo.forEach((item) => {
-      item.addEventListener("click", abrirLista);
+  function activeAccordion() {
+    this.classList.toggle(activeClass);
+    this.nextElementSibling.classList.toggle(activeClass);
+  }
+
+  if (accordionList.length) {
+    accordionList[0].classList.add(activeClass);
+    accordionList[0].nextElementSibling.classList.add(activeClass);
+
+    accordionList.forEach((item) => {
+      item.addEventListener('click', activeAccordion);
     });
   }
 }
