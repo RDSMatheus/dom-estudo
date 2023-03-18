@@ -1,20 +1,20 @@
-import initAnimaNumeros from "./anima-numeros.js";
-export default function initAnimScroll() {
-  const section = document.querySelectorAll("[data-anime='scroll']");
+export default function initAnimacaoScroll() {
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
+  const windowMetade = window.innerHeight * 0.6;
 
   function animaScroll() {
-    const windowHeight = window.innerHeight * 0.6;
-    section.forEach((item) => {
-      const distancia = item.getBoundingClientRect();
-      const visibleScroll = distancia.top - windowHeight < 0;
-      if (visibleScroll) {
-        item.classList.add("ativo");
-      } else if(item.classList.contains("ativo")) {
-        item.classList.remove("ativo");
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const isSectionVisible = (sectionTop - windowMetade) < 0;
+      if (isSectionVisible) {
+        section.classList.add('ativo');
+      } else if (section.classList.contains('ativo')) {
+        section.classList.remove('ativo');
       }
     });
   }
-  animaScroll();
-
-  window.addEventListener("scroll", animaScroll);
+  if (sections.length) {
+    animaScroll();
+    window.addEventListener('scroll', animaScroll);
+  }
 }
