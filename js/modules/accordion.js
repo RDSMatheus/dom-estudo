@@ -19,7 +19,7 @@ export default class initAccordion {
     if (this.accordionList.length) {
       this.addAccordionEvent();
       this.toggleAccordion(this.accordionList[0])
-
+      return this;
       
     }
   }
