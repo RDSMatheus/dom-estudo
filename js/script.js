@@ -19,7 +19,7 @@ accordion.init();
 const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
 tabNav.init();
 
-const scrollAnima = new ScrollAnima('[data-anime="scroll"]', );
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
 const modal = new Modal ('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
